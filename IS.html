@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Iteration Statements</title>
+    <style>
+        .handson{
+        background-color: aqua;
+    }
+    a{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="handson">
+      <h1>Iteration Statements :</h1>
+    <h2>1) Find the number of digits</h2>
+    <pre>const Find_Digits = (N) => 
+            {
+            let ans =0;
+              while(N!==0) {
+              ans++;
+              N= Math.floor(N/10);
+              }
+              return ans;	 
+            };
+            </pre>
+    <h2>2) Find the Fives</h2>
+    <pre>const Find_Five = (N) => 
+            {
+            let ans =0;
+              while(N!==0) {
+                let check=N%10;
+                  if(check===5){
+                ans++;
+                }
+                  N= Math.floor(N/10);
+                }
+              return ans;
+            };</pre>
+    <h2>3) Find Sum</h2>
+    <pre>const findSum = (n) => {
+            let answer=0;
+               for (let i = 1; i<=n; i++) 
+             {
+               if(i%2===0)
+             answer=answer+i
+               }
+             return answer;
+           };</pre>
+    <h2>4) Find the digits sum of a number</h2>
+    <pre>const Number_Sum = (N) => 
+            {
+              var sum=0;
+                while(N!=0){
+                sum+=N%10;
+                N=parseInt(N/10);
+              }
+                return sum;
+            };</pre>
+    <h2>5) Print the Odds</h2>
+    <pre>const Print_Odd = (N) => 
+            {
+             var i=2;
+              console.log(i);
+                for (i = 2 ; i <= N; i++) {
+                if(i%2===1){
+              console.log(i);
+               }
+              } 
+            };</pre>
+    <h2>6) Print the Pattern</h2>
+    <pre>const Print_pattern = (N) => 
+            {
+              let pattern="";
+                for(let i=1; i<=N;i++){
+                for(let j=0; j < i;j++){
+                  pattern+="*";
+                    }
+                      pattern+= "\n"
+                    }
+                    console.log(pattern)
+            };</pre>
+    <h2>7) Check if the number is Prime or not</h2>
+    <pre>const Prime_Check = (N) => 
+            {
+              let factor=0;
+                for(i=1;i<=N;i++){
+                  if(N%i===0){
+                    factor++
+               }
+              }
+                if(factor===2){
+                  return "YES";
+                    }
+                else{
+                  return "NO";
+                  }
+            };</pre>
+    <h2>8) Print Numbers</h2>
+    <pre>const printNumbers = (n) => {
+            for(let i=1;i<=n;i++)
+            {
+               console.log(i);
+            }
+        };</pre>
+    <h2>9) Print the Table</h2>
+    <pre>const Print_Table = (N) => 
+            {
+               let n = 3;
+                for (let i = 1; i <= 10; i++)
+                    console.log(N + " * " + i +" = " + N * i);
+            };</pre>
+          </div>
+  <a href="Arrays.html">Next</a>
+</body>
+</html>

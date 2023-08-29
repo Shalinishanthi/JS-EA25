@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem Solving</title>
+    <style>
+        .handson{
+        background-color: aqua;
+    }
+    a{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="handson">
+      <h1>Problem Solving : </h1>
+    <h2>1) Find the Smaller Angle : </h2>
+    <pre>  var Minimal_Angle = (h, m) => 
+            {
+               // Calculate angle made by hour hand with respect to 12 o'clock
+              let hourAngle = (h % 12) * 30 + m / 2;
+              
+              // Calculate angle made by minute hand with respect to 12 o'clock
+              let minuteAngle = m * 6;
+              
+              // Calculate absolute difference between two angles
+              let angleDiff = Math.abs(hourAngle - minuteAngle);
+              
+              // Take smaller angle between two possible angles
+              let angle = Math.min(angleDiff, 360 - angleDiff);
+              
+              // Return minimal angle
+              return angle;   
+            };</pre>
+
+    <h2>2) Check whether the year is Leap year or not :</h2>
+    <pre>var Check_Leap = (year) => 
+            {
+             // Check if the year is divisible by 4
+              if (year % 4 === 0) {
+                // If the year is divisible by 100 and not divisible by 400, it is not a leap year
+                if (year % 100 === 0 && year % 400 !== 0) {
+                  return "Non Leap Year";
+                } else {
+                  // Otherwise, it is a leap year
+                  return "Leap Year";
+                }
+              } else {
+                // If the year is not divisible by 4, it is not a leap year
+                return "Non Leap Year";
+              }
+            };</pre>
+    
+    <h2>3) Perfect Number Check :</h2>
+    <pre>var Perfect_Check = (N) => 
+            {
+              // Find the divisors of the number and add them
+                let sum = 0;
+                let M = 1;
+                 // loop through all divisors of the number
+                while(N>=M) {
+                 if (N % M === 0) {
+                   sum += M;
+                  }
+                  M++;
+                }
+                // Check if the sum of divisors is equal to the input number
+                if (sum === N) {
+                  return "YES";
+                } else {
+                  return "NO";
+                }    
+                    
+            };</pre>
+            
+    <h2>4) Reverse the Number :</h2>
+    <pre>var Reverse_Number = (N) => 
+            {
+             // Initialize a variable to store the reversed number
+                let reversedNumber = 0;
+              
+                // Loop through the digits of the number and reverse them
+                while (N > 0) {
+                  let remainder = N % 10;
+                  reversedNumber = reversedNumber * 10 + remainder;
+                  N = Math.floor(N / 10);
+                }
+              
+                // Return the reversed number
+                return reversedNumber; 
+            
+            };
+             </pre>
+    
+    <h2>5) Substring Check :</h2>
+    <pre>var Substring_Check = (S1, S2) => 
+            {
+                if (S1.includes(S2)) {
+                  return "YES";
+                } else {
+                  return "NO";
+                }   
+            };</pre>
+          </div>
+          <a href="Objects.html">Next</a>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inheritance and Prototype</title>
+    <script src="IP.js"></script>
+    <style>
+            body{
+        background-color: aqua;
+        color: black;
+      }
+      a{
+            font-size: 50px;
+        }
+        </style>
+</head>
+<body>x`
+        <h2> 1. Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h2>
+        <pre>
+        const parent = {
+            name: "Sanjeev",
+            printName: function () {
+              console.log(this.name);
+            },
+          };
+          
+          const child = Object.create(parent);
+          child.printName();
+        </pre>
+          <h2> 2. Write code to explain prototype chaining</h2>
+          <pre>
+          function Mobile(brand, model, os) {
+            this.brand = brand;
+            this.model = model;
+            this.os = os;
+          }
+          
+          const myMobile = new Mobile("Samsung", "A11", "Android 12");
+          console.log(myMobile.hasOwnProperty("brand")); 
+        </pre>
+        <h4>Output : true</h4>
+
+          
+          <h2> 3. Add a method to calculate sum of all elements in Array in array's prototype, use that method to calculate sum for multiple arrays</h2>
+          <pre>
+          const numbers = [10, 20, 30, 40, 50]; // 150
+          const numbers1 = [100, 200, 300]; // 600
+          
+          Array.prototype.total = function () {
+            let sum = 0;
+            for (let i = 0; i < this.length; i++) {
+              sum += this[i];
+            }
+            console.log(sum);
+          };
+          
+          numbers.total(); <h4>Output : 150</h4>
+          numbers1.total(); <h4>Output : 600</h4>
+        </pre>
+          <h2> 4. Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h2>
+          <pre>
+          const studentOne = {
+            name: "Sanjeev",
+            age: 20,
+          };
+          
+          studentTwo = Object.create(studentOne);
+          studentTwo.birthYear = 2022;
+          // console.log(studentTwo.birthYear);
+          
+          for (const key in studentTwo) {
+            console.log(key);
+          }</pre>
+
+          <a href="AO.html">Next</a>
+          
+</body>
+</html>
